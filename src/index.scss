@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+$primary-color: #46A358;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,11 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }

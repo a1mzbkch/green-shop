@@ -3,6 +3,7 @@ import cart from "../../../assets/images/cart.svg";
 import search from "../../../assets/images/search.svg";
 import { IoExitOutline } from "react-icons/io5";
 import "./Header.scss";
+import { NavLink } from "react-router-dom";
 
 const Header = () => (
   <header id="header">
@@ -13,10 +14,10 @@ const Header = () => (
           <h1>GREENSHOP</h1>
         </div>
         <div className="header--nav">
-          <a>Home</a>
-          <a>Shop</a>
-          <a>Plant Care</a>
-          <a>Blogs</a>
+          <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={"/shop"}>Shop</NavLink>
+          <NavLink to={"/plant"}>Plant Care</NavLink>
+          <NavLink to={"/blogs"}>Blogs</NavLink>
         </div>
         <div className="header--action">
           <a>
@@ -24,7 +25,7 @@ const Header = () => (
           </a>
           <a>
             <img src={cart} alt="img" />
-            <div className="header--action__count">0</div>
+            <div className="header--action__count">6</div>
           </a>
           <button>
             <a>

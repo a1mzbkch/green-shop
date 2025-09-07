@@ -32,6 +32,9 @@ importers:
       scss:
         specifier: ^0.2.4
         version: 0.2.4
+      swiper:
+        specifier: ^11.2.10
+        version: 11.2.10
     devDependencies:
       '@eslint/js':
         specifier: ^9.33.0
@@ -1215,6 +1218,10 @@ packages:
     resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
     engines: {node: '>=8'}
 
+  swiper@11.2.10:
+    resolution: {integrity: sha512-RMeVUUjTQH+6N3ckimK93oxz6Sn5la4aDlgPzB+rBrG/smPdCTicXyhxa+woIpopz+jewEloiEE3lKo1h9w2YQ==}
+    engines: {node: '>= 4.7.0'}
+
   tinyglobby@0.2.14:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
     engines: {node: '>=12.0.0'}
@@ -2309,6 +2316,8 @@ snapshots:
   supports-color@7.2.0:
     dependencies:
       has-flag: 4.0.0
+
+  swiper@11.2.10: {}
 
   tinyglobby@0.2.14:
     dependencies:

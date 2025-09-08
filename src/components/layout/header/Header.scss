@@ -75,11 +75,10 @@ $primary-color: #46a358;
         font-size: 20px;
       }
       button {
-        position: relative;
         display: flex;
         align-items: center;
-        gap: 3px;
-        padding: 3px 15px;
+        gap: 5px;
+        padding: 7px 15px;
         border-radius: 8px;
         font-size: 16px;
         font-weight: 500;
@@ -87,11 +86,6 @@ $primary-color: #46a358;
         color: white;
         border: none;
         cursor: pointer;
-
-        a {
-          margin: 5px 0px 0px 0px;
-          align-items: center;
-        }
       }
       &__count {
         width: 15px;
@@ -107,6 +101,9 @@ $primary-color: #46a358;
         position: absolute;
         top: 0;
         left: 65px;
+      }
+      &__img {
+        cursor: pointer;
       }
     }
   }

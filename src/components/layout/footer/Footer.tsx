@@ -2,7 +2,6 @@ import img1 from "../../../assets/images/garden.svg";
 import img2 from "../../../assets/images/Plant.svg";
 import img3 from "../../../assets/images/graden.svg";
 import Logo from "../../../assets/images/Logo.svg";
-// import { CiLocationOn } from "react-icons/ci";
 
 const Footer = () => {
   return (

@@ -1,4 +1,5 @@
 import ProductCard from "../../ui/productCard/ProductCard";
+import "./Product.scss"
 
 const Product = () => {
   return (

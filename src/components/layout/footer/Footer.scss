@@ -1,0 +1,186 @@
+#footer {
+  .footer {
+    padding: 20px 0;
+    background: #908e8e0e;
+    &--up {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 250px;
+        height: 210px;
+        padding: 0 30px;
+        img {
+          width: 40%;
+          height: 100px;
+        }
+        h2 {
+          margin-top: 5px;
+          font-weight: 700;
+          font-size: 17px;
+          color: #3d3d3d;
+        }
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          color: #727272;
+          line-height: 23px;
+        }
+        &:nth-child(2) {
+          border-left: 1px solid #46a3581a;
+        }
+        &:nth-child(3) {
+          border-left: 1px solid #46a3581a;
+        }
+      }
+      &__email {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0px 20px;
+        h2 {
+          font-weight: 700;
+          font-size: 18px;
+        }
+        &--form {
+          display: flex;
+          align-items: center;
+          input {
+            width: 75%;
+            height: 43px;
+            padding-left: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: none;
+            outline: none;
+            color: #3d3d3d;
+            box-shadow: 0px 0px 20px 0px #0000000f;
+          }
+          button {
+            padding: 12px 24px;
+            background: #46a358;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+        }
+        p {
+          line-height: 25px;
+          color: #727272;
+          font-size: 13px;
+        }
+      }
+    }
+    &--center {
+      margin: 30px 0;
+      padding: 30px 30px;
+      background: #46a3581a;
+      display: flex;
+      align-items: center;
+      gap: 130px;
+      &__logo {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        h3 {
+          color: #46a358;
+          font-weight: 800;
+        }
+      }
+      &__address {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h4 {
+          font-weight: 400;
+          font-size: 14px;
+          color: #3d3d3d;
+        }
+      }
+      &__contacts {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h4 {
+          font-weight: 400;
+          font-size: 14px;
+          color: #3d3d3d;
+        }
+      }
+      &__phone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        h4 {
+          font-weight: 400;
+          font-size: 14px;
+          color: #3d3d3d;
+        }
+      }
+    }
+    &--down {
+      display: flex;
+      gap: 150px;
+      padding: 20px 0 40px 0;
+      border-bottom: 1px solid #46a35833;
+      &__navBar {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: #3d3d3d;
+        padding: 0px 30px;
+        h1 {
+          font-weight: 700;
+          font-size: 18px;
+        }
+        a {
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+      &__media {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        h1 {
+          font-weight: 700;
+          font-size: 18px;
+          color: #3d3d3d;
+        }
+        &--links {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 15px;
+          a {
+            width: 32px;
+            height: 32px;
+            border-radius: 5px;
+            border: 1px solid #46a35833;
+            color: #46a35899;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    &--privace {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0 0 0;
+      h4 {
+        font-weight: 400;
+        font-size: 14px;
+        color: #3D3D3D;
+      }
+    }
+  }
+}

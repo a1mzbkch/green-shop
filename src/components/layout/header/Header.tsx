@@ -6,9 +6,11 @@ import { IoExitOutline } from "react-icons/io5";
 import "./Header.scss";
 import { NavLink } from "react-router-dom";
 import LoginModal from "../../main/loginModal/LoginModal";
+import { useSelector } from "react-redux";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const userData = useSelector((state: any) => state.user);
 
   return (
     <header id="header">
@@ -32,10 +34,16 @@ const Header: React.FC = () => {
               <img src={cart} alt="img" />
               <div className="header--action__count">6</div>
             </div>
-            <button onClick={() => setIsOpen(true)}>
-              <IoExitOutline />
-              Login
-            </button>
+            {userData.photoURL ? (
+              <div className="header--user">
+                <img src={userData.photoURL} alt="img" />
+              </div>
+            ) : (
+              <button onClick={() => setIsOpen(true)}>
+                <IoExitOutline />
+                Login
+              </button>
+            )}
           </div>
         </div>
       </div>

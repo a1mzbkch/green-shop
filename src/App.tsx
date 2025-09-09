@@ -1,6 +1,5 @@
 import "./App.scss";
 import Header from "./components/layout/header/Header";
-// import MainPage from "./components/main/MainPage";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -11,6 +10,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { setUser } from "./redux/userSlice";
 import Product from "./components/main/product/Product";
+import Footer from "./components/layout/footer/Footer";
+import Blog from "./components/main/blog/Blog";
 
 function App() {
   const dispatch = useDispatch();
@@ -35,9 +36,10 @@ function App() {
   return (
     <div className="app">
       <Header />
-      {/* <MainPage/> */}
       <Welcome />
       <Product/>
+      <Blog/>
+      <Footer/>
     </div>
   );
 }

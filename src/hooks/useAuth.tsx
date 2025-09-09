@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { setUser, clearUser, setLoading } from "../redux/userSlice";
-import { RootState } from "../redux";
+import { RootState } from "../redux/store";
 
 export const useAuth = () => {
   const dispatch = useDispatch();

@@ -1,32 +1,27 @@
-// store.ts
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage"; // localStorage
+import storage from "redux-persist/lib/storage";
 import productSlice from "./productSlice";
 import userSlice from "./userSlice";
 
-// объединяем редьюсеры
 const rootReducer = combineReducers({
   product: productSlice,
   user: userSlice,
 });
 
-// конфиг для persist
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["user"], // сохраняем только userSlice
+  whitelist: ["user"],
 };
 
-// создаём persist редьюсер
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// создаём store
 export const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      serializableCheck: false, // чтобы redux-persist не ругался на не-сериализуемые объекты
+      serializableCheck: false,
     }),
 });
 

@@ -9,6 +9,9 @@ import { useDispatch } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { setUser } from "./redux/userSlice";
+import Product from "./components/main/product/Product";
+import Footer from "./components/layout/footer/Footer";
+import Blog from "./components/main/blog/Blog";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +37,9 @@ function App() {
     <div className="app">
       <Header />
       <Welcome />
+      <Product/>
+      <Blog/>
+      <Footer/>
     </div>
   );
 }

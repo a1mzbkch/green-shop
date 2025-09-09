@@ -1,7 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import productSlice from "./ProductSlice";
+import productSlice from "./productSlice";
 import userSlice from "./userSlice";
 
 const rootReducer = combineReducers({
@@ -12,7 +12,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["user"],
+  whitelist: ["user"], 
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -24,6 +24,8 @@ export const store = configureStore({
       serializableCheck: false,
     }),
 });
+
 export const persistor = persistStore(store);
+
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

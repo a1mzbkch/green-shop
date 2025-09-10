@@ -4,13 +4,14 @@ import cart from "../../../assets/images/cart.svg";
 import search from "../../../assets/images/search.svg";
 import { IoExitOutline } from "react-icons/io5";
 import "./Header.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import LoginModal from "../../main/loginModal/LoginModal";
 import { useSelector } from "react-redux";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const userData = useSelector((state: any) => state.user);
+  const nav = useNavigate();
 
   return (
     <header id="header">
@@ -36,7 +37,11 @@ const Header: React.FC = () => {
             </div>
             {userData.photoURL ? (
               <div className="header--user">
-                <img src={userData.photoURL} alt="img" />
+                <img
+                  src={userData.photoURL}
+                  alt="img"
+                  onClick={() => nav("/profile")}
+                />
               </div>
             ) : (
               <button onClick={() => setIsOpen(true)}>

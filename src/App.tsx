@@ -9,12 +9,26 @@ import { useDispatch } from "react-redux";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { setUser } from "./redux/userSlice";
-import Product from "./components/main/product/Product";
 import Footer from "./components/layout/footer/Footer";
-import Blog from "./components/main/blog/Blog";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./components/main/mainPage/MainPage";
+import Profile from "./components/pages/profile/Profile";
 
 function App() {
   const dispatch = useDispatch();
+
+  let routes = [
+    {
+      id: 1,
+      path: "/",
+      element: <MainPage />,
+    },
+    {
+      id: 2,
+      path: "/profile",
+      element: <Profile />,
+    },
+  ];
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -33,13 +47,16 @@ function App() {
 
     return () => unsubscribe();
   }, [dispatch]);
+
   return (
     <div className="app">
       <Header />
-      <Welcome />
-      <Product/>
-      <Blog/>
-      <Footer/>
+      <Routes>
+        {routes.map((el) => (
+          <Route path={el.path} element={el.element} key={el.id} />
+        ))}
+      </Routes>
+      <Footer />
     </div>
   );
 }
